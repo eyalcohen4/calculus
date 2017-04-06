@@ -4,11 +4,13 @@ export function percentageFromSum(percent, number) {
   return (number / 100) * percent;
 }
 
-function percentageOfNumberFromSum(number, sum) {
-  return (sum / 100) / number;
+export function percentageOfNumberFromSum(numberOf, numberFrom) {
+  return numberOf / (numberFrom / 100);
 }
 
-const sum = percentageOfNumberFromSum(10, 20);
+export function hundredPercentFromPercantage(percent, number) {
+  return (number / percent) * 100;
+}
 
 
 export default {
@@ -17,7 +19,6 @@ export default {
   data() {
     return {
       message: 'Hello Vue',
-      sum,
     };
   },
 };
