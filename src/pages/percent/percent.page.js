@@ -1,3 +1,4 @@
+import inputNumber from '@/components/inputs/input-number';
 import template from './percent.page.html';
 
 export function percentageFromSum(percent, number) {
@@ -16,9 +17,11 @@ export function hundredPercentFromPercantage(percent, number) {
 export default {
   name: 'percent',
   template,
+  components: { inputNumber },
   data() {
     return {
       message: 'Hello Vue',
+      input: '',
     };
   },
 };
