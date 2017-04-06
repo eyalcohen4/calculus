@@ -3,8 +3,10 @@
 
 import Vue from 'vue';
 import VueMaterial from 'vue-material';
+import VueI18n from 'vue-i18n';
 
 import 'vue-material/dist/vue-material.css';
+import he from './language/he';
 
 import App from './App';
 import router from './router';
@@ -12,6 +14,7 @@ import router from './router';
 Vue.config.productionTip = false;
 
 Vue.use(VueMaterial);
+Vue.use(VueI18n);
 
 /* eslint-disable no-new */
 new Vue({
@@ -19,4 +22,5 @@ new Vue({
   router,
   template: '<App/>',
   components: { App },
+  he,
 });

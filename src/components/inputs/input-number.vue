@@ -1,14 +1,13 @@
 <template>
   <md-input-container>
 
-    <label :for="id">Number</label>
-    <md-input 
-      type="number" 
-      :id="id" 
-      :value="value" 
-      :placeholder="placeholder"
-      @change="updateValue($event)"
-      ></md-input>
+    <label :for="id">{{ label }}</label>
+    <md-input
+      type="number"
+      :id="id"
+      :value="value"
+      @change="updateValue($event)">
+    </md-input>
 
   </md-input-container>
 </template>
@@ -18,8 +17,9 @@
     name: 'input-number',
     props: {
       id: { type: String, required: true },
-      value: { type: String, required: true },
+      value: { type: null, required: true },
       placeholder: { type: String },
+      label: { type: String },
     },
     methods: {
       updateValue(number) {

@@ -1,27 +1,47 @@
-import inputNumber from '@/components/inputs/input-number';
-import template from './percent.page.html';
+  import he from '@/language/he';
 
-export function percentageFromSum(percent, number) {
-  return (number / 100) * percent;
-}
+  import calcCard from '@/HoC/calculation-card';
+  import template from './percent.page.html';
 
-export function percentageOfNumberFromSum(numberOf, numberFrom) {
-  return numberOf / (numberFrom / 100);
-}
-
-export function hundredPercentFromPercantage(percent, number) {
-  return (number / percent) * 100;
-}
-
-
-export default {
-  name: 'percent',
-  template,
-  components: { inputNumber },
-  data() {
-    return {
-      message: 'Hello Vue',
-      input: '',
-    };
-  },
-};
+  export default {
+    name: 'percent',
+    template,
+    components: { calcCard },
+    data() {
+      return {
+        cards: {
+          perFromSum: {
+            title: he.PERCENTAGE_FROM_SUM_TITLE,
+            button: he.CALC,
+            inputs: [
+              {
+                id: 'perFromSum-per',
+                value: null,
+                label: he.PERCANTAGE,
+              },
+              {
+                id: 'perFromSum-sum',
+                value: null,
+                label: he.SUM,
+              },
+            ],
+            result: null,
+          },
+        },
+      };
+    },
+    methods: {
+      perFromSum() {
+        const card = this.cards.perFromSum;
+        const number = card.inputs[0].value;
+        const percent = card.inputs[1].value;
+        card.result = (number / 100) * percent;
+      },
+      perOfNumberFromNumber(numberOf, numberFrom) {
+        return numberOf / (numberFrom / 100);
+      },
+      fullPerFromPer(percent, number) {
+        return (number / percent) * 100;
+      },
+    },
+  };
