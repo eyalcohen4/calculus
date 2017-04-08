@@ -1,0 +1,44 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 100%;
+  min-height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 100%;
+  min-height: 100%;
+}
+
+main {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  padding: 0 50px;
+  font-size: 1rem;
+}
+
+input {
+  direction: rtl;
+  text-align: right;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}

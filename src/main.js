@@ -5,7 +5,8 @@ import Vue from 'vue';
 import VueMaterial from 'vue-material';
 import VueI18n from 'vue-i18n';
 
-import 'vue-material/dist/vue-material.css';
+import '@/style/index.scss';
+
 import he from './language/he';
 
 import App from './App';

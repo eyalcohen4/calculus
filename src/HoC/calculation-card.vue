@@ -15,7 +15,7 @@
     </inputNumber>
 
     <md-card-actions>
-      <md-button @click.native="handler">
+      <md-button @click.native="handler" class="send-button">
         {{ button }}
       </md-button>
     </md-card-actions>

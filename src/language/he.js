@@ -6,4 +6,5 @@ export default {
   CALC: 'חשב',
   PERCANTAGE: 'אחוז',
   SUM: 'סכום',
+  PERCANTAGE_CALC: 'מחשבון אחוזים',
 };

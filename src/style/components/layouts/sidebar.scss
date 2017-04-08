@@ -1,0 +1,10 @@
+.sidebar {
+
+  /* Override md-button settings */
+  &__button {
+    padding: 0 !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
+    line-height: 0 !important
+  }  
+}

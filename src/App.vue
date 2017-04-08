@@ -1,23 +1,26 @@
 <template>
   <div id="app">
-    <header></header>
+    <top></top>
     <main>
       <router-view></router-view>
     </main>
-    <footer></footer>
+    <bottom></bottom>
   </div>
 </template>
 
 <script>
+import top from '@/components/layout/Top';
+import bottom from '@/components/layout/Bottom';
+
 export default {
   name: 'app',
+  components: {
+    top,
+    bottom,
+  },
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-}
+
 </style>
