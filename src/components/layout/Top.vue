@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <Sidebar class="mobile-only"></Sidebar>
     <div class="header__logo">
       LOGO
     </div>
@@ -12,13 +11,11 @@
 
 <script>
   import Navigation from './Navigation';
-  import Sidebar from './Sidebar';
 
   export default {
     name: 'top',
     components: {
       Navigation,
-      Sidebar,
     },
   };
 </script>

@@ -9,14 +9,12 @@
 </template>
 
 <script>
-  import he from '@/language/he';
 
   export default {
     name: 'navigation',
     data() {
       return {
         items: [
-          he.PERCANTAGE_CALC,
         ],
       };
     },

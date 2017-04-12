@@ -2,26 +2,25 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue';
-import VueMaterial from 'vue-material';
-import VueI18n from 'vue-i18n';
+import { sync } from 'vuex-router-sync';
 
 import '@/style/index.scss';
 
-import he from './language/he';
-
 import App from './App';
+import store from './store';
 import router from './router';
+import setLocale from './i18n';
 
 Vue.config.productionTip = false;
 
-Vue.use(VueMaterial);
-Vue.use(VueI18n);
+setLocale('he');
+sync(store, router);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App },
-  he,
 });

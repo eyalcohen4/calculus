@@ -1,27 +1,22 @@
 <template>
-<md-card md-with-hover>
-  <md-card-header v-if="title">
-    <div class="md-title">{{ title }}</div>
-    <div class="md-subhead" v-if="subtitle">{{ subtitle }}</div>
-  </md-card-header>
-
-  <md-card-content>
-    <inputNumber
+  <div>
+    <div>
+      <span> {{ title }} </span>
+      <span v-if="subtitle"> {{ subtitle }} </span>
+    </div>
+    
+    <div>
+       <inputNumber
       v-for="input in inputs"
       key="input.id"
       :id="input.id"
       v-model="input.value"
       :label="input.label">
     </inputNumber>
-
-    <md-card-actions>
-      <md-button @click.native="handler" class="send-button">
-        {{ button }}
-      </md-button>
-    </md-card-actions>
-    <span v-if="result"> {{ result }} </span>
-  </md-card-content>
-</md-card>
+    <button @click="handler"> {{ button }} </button>
+    </div>
+    <span v-if="result"> {{ result } }</span>
+  </div>
 </template>
 
 <script>
