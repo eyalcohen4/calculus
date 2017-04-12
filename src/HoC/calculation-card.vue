@@ -12,9 +12,11 @@
         class="card__content__item">
       </inputNumber>
     </div>
+
     <div class="card__actions">
       <button @click="handler" class="card__actiobs__button"> {{ button }} </button>
     </div>
+
     <div class="card__result">
       <span v-if="result"> {{ result }} </span>
     </div>
@@ -32,7 +34,7 @@
       handler: { type: Function, required: true },
       button: { type: String, rqeuired: true },
       inputs: { type: Array, required: true },
-      result: { type: String },
+      result: { type: Number },
     },
     components: {
       inputNumber,

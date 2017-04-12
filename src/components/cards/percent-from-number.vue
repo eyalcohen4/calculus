@@ -19,7 +19,7 @@
     data() {
       return {
         title: 'cards.percent_from_number',
-        handler: percentFromNumber,
+        handler: this.handler,
         inputs: [
           {
             id: 'perFromNumber-number',
@@ -33,7 +33,17 @@
           },
         ],
         button: 'button',
+        result: null,
       };
+    },
+
+    methods: {
+      handler() {
+        const num = this.inputs[0].value;
+        const percent = this.inputs[1].value;
+
+        this.result = percentFromNumber(num, percent);
+      },
     },
   };
 
