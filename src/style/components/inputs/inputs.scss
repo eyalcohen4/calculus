@@ -1,0 +1,11 @@
+%input-container {
+  display: flex;
+
+  &__label {
+    position: absolute;
+  }
+
+  &__input {
+    flex: 1;
+  }
+}

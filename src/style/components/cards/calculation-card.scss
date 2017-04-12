@@ -1,0 +1,15 @@
+.calculation-card {
+  @extend %card;
+
+  &__header {
+    @extend %card__header;
+  }
+
+  &__content {
+    @extend %card__content;
+  }
+
+  &__actions {
+    @extend %card__actions;
+  }
+}

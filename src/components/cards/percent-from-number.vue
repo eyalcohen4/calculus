@@ -32,7 +32,7 @@
             label: 'percent',
           },
         ],
-        button: 'button',
+        button: 'calc',
         result: null,
       };
     },

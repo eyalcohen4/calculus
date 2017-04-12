@@ -1,6 +1,6 @@
 <template>
   <div class="input-number">
-    <label :for="id" class="input-number__label"></label>
+    <label :for="id" class="input-number__label" v-text="$t(label)"></label>
     <input type="number" :id="id" :value="value" @change="updateValue($event)" class="input-number__input">
   </div>
 </template>
