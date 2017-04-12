@@ -1,15 +1,8 @@
 <template>
-  <md-input-container>
-
-    <label :for="id">{{ label }}</label>
-    <md-input
-      type="number"
-      :id="id"
-      :value="value"
-      @change="updateValue($event)">
-    </md-input>
-
-  </md-input-container>
+  <div class="input-number">
+    <label :for="id" class="input-number__label"></label>
+    <input type="number" :id="id" :value="value" @change="updateValue($event)" class="input-number__input">
+  </div>
 </template>
 
 <script>
@@ -22,8 +15,8 @@
       label: { type: String },
     },
     methods: {
-      updateValue(number) {
-        this.$emit('input', number);
+      updateValue(e) {
+        this.$emit('input', e.currentTarget.value);
       },
     },
   };

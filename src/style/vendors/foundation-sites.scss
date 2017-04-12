@@ -1,1 +1,19 @@
-@import '~foundation-sites/scss/foundation'
+@import '~foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+$global-flexbox:            true;
+$body-background:           none;
+
+$grid-row-width:            960px;
+$grid-column-count:         24;
+$grid-column-gutter:        (small: 44px, medium: 44px, large: 0);
+
+$offcanvas-background:      none;
+$offcanvas-exit-background: none;
+
+$accordionmenu-arrows:      false;
+$dropdown-padding:          0;
+$reveal-overlay-background: transparentize(#000000, 0.2);

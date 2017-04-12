@@ -1,8 +1,8 @@
 const en = {
   message: {
-    percentage_from_sum_title: 'How much is percentage from number ?',
+    percent_from_number: 'How much is percentage from number ?',
     calc: 'calculate',
-    percentage: 'percentage',
+    percent: 'percentage',
     sum: 'sum',
     percentage_calculator: 'Percentage Calculator',
     switch_language: 'Switch Language',

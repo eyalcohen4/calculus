@@ -3,7 +3,7 @@
  * @param {number} number - the number to calc from
  * @param {number} percentage - the percentage to calc of
  */
-export function percentageFromNumber(number, percentage) {
+export function percentFromNumber(number, percentage) {
   return (number / 100) * percentage;
 }
 
@@ -12,7 +12,7 @@ export function percentageFromNumber(number, percentage) {
  * @param {number} number
  * @param {number} sum
  */
-export function percentageOfNumber(number, sum) {
+export function percentOfNumber(number, sum) {
   return number / (sum / 100);
 }
 
@@ -21,6 +21,6 @@ export function percentageOfNumber(number, sum) {
  * @param {number} percentage
  * @param {number} number
  */
-export function hundredPercentageFromPercantage(percentage, number) {
+export function hundredPercentFromPercant(percentage, number) {
   return (number / percentage) * 100;
 }

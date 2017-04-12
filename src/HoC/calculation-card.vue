@@ -1,21 +1,23 @@
 <template>
-  <div>
-    <div>
-      <span> {{ title }} </span>
-      <span v-if="subtitle"> {{ subtitle }} </span>
+  <div class="card">
+    <span v-text="$t(title)" class="card__title"></span>
+
+    <div class="card__content">
+      <inputNumber
+        key="input.id"
+        v-for="input in inputs"
+        v-model="input.value"
+        :id="input.id"
+        :label="input.label"
+        class="card__content__item">
+      </inputNumber>
     </div>
-    
-    <div>
-       <inputNumber
-      v-for="input in inputs"
-      key="input.id"
-      :id="input.id"
-      v-model="input.value"
-      :label="input.label">
-    </inputNumber>
-    <button @click="handler"> {{ button }} </button>
+    <div class="card__actions">
+      <button @click="handler" class="card__actiobs__button"> {{ button }} </button>
     </div>
-    <span v-if="result"> {{ result } }</span>
+    <div class="card__result">
+      <span v-if="result"> {{ result }} </span>
+    </div>
   </div>
 </template>
 

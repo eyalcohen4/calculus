@@ -2,9 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue';
+import VueHelmet from 'vue-helmet';
 import { sync } from 'vuex-router-sync';
 
 import '@/style/index.scss';
+
+import changeDirection from '@/lib/change-direction';
 
 import App from './App';
 import store from './store';
@@ -16,11 +19,20 @@ Vue.config.productionTip = false;
 setLocale('he');
 sync(store, router);
 
+if (store.getters.locale === 'he') {
+  changeDirection('rtl');
+} else {
+  changeDirection('ltr');
+}
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   template: '<App/>',
-  components: { App },
+  components: {
+    App,
+    VueHelmet,
+  },
 });

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__credit">
-      Powered By 
+      Powered By
     </div>
     <div class="footer__switch-language">
       <switchLanguage></switchLanguage>
