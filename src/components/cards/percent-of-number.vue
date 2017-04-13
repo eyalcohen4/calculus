@@ -6,11 +6,11 @@
 
  <script>
  /* eslint-disable no-underscore-dangle */
-  import { percentFromNumber } from '@/lib/percentage';
+  import { percentOfNumber } from '@/lib/percentage';
   import calcCard from '@/HoC/calculation-card';
 
   export default {
-    name: 'percentFromNumber',
+    name: 'percentOfNumber',
 
     components: {
       calcCard,
@@ -18,34 +18,40 @@
 
     data() {
       return {
-        title: 'cards.percent_from_number',
+        title: 'cards.percent_of_number',
         handler: this.handler,
         inputs: [
           {
-            id: 'perFromNumber-number',
+            id: 'perOfNumber-number',
             value: 0,
             label: 'sum',
             required: true,
           },
           {
-            id: 'perFromNumber-percent',
+            id: 'perOfNumber-sum',
             value: 0,
-            label: 'percent',
+            label: 'sum',
             required: true,
           },
         ],
+        error: '',
         button: 'calc',
         result: '?',
-
+        percent: true,
       };
     },
 
     methods: {
       handler() {
         const num = this.inputs[0].value;
-        const percent = this.inputs[1].value;
+        const sum = this.inputs[1].value;
 
-        this.result = percentFromNumber(num, percent);
+        if (num < 1 || sum < 1) {
+          this.error = 'forms.required';
+          return;
+        }
+
+        this.result = percentOfNumber(num, sum);
       },
     },
   };

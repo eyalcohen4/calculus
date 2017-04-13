@@ -7,21 +7,6 @@
 
   &__content {
     @extend %card__content;
-
-    &__result {
-
-      &__sign, &__number {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 1.250em;
-        font-weight: bolder;
-      }
-
-      &__sign {
-        margin: 0 0 45px 0;
-      }
-    }
   }
 
   &__actions {

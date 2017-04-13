@@ -1,0 +1,11 @@
+.input-number {
+  @extend %input-container;
+
+  &__label {
+    @extend %input-container__label;
+  }
+
+  &__input {
+    @extend %input-container__input;
+  }
+}

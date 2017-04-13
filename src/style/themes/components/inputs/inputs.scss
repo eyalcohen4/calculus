@@ -1,0 +1,9 @@
+%input-container {
+  &__label {
+    color: $secondary-font-color;
+  }
+
+  &__input {
+    border-bottom: 1px solid $accent-color;
+  }
+}

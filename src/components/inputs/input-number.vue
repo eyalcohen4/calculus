@@ -1,7 +1,7 @@
 <template>
   <div class="input-number">
+    <input type="number" :id="id" @change="updateValue($event)" :required="required" class="input-number__input">
     <label :for="id" class="input-number__label" v-text="$t(label)"></label>
-    <input type="number" :id="id" :value="value" @change="updateValue($event)" class="input-number__input">
   </div>
 </template>
 
@@ -13,6 +13,7 @@
       value: { type: null, required: true },
       placeholder: { type: String },
       label: { type: String },
+      required: { type: Boolean, required: true },
     },
     methods: {
       updateValue(e) {

@@ -1,0 +1,12 @@
+%button {
+  background: $accent-color;
+  color: $white-font;
+
+  &:hover {
+    background: $accent-color-hover;
+  }
+
+  &:active {
+    border: $button-active-border;
+  }
+}

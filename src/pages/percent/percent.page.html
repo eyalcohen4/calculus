@@ -1,3 +1,10 @@
-<div>
-  <percentFromNumber></percentFromNumber>
+<div class="percent-page">
+  <header class="percent-page__header">
+    <h1 class="percent-page__header__title" v-text="$t(title)"></h1>
+  </header>
+  <div class="percent-page__content">
+    <percentFromNumber class="percent-page__item"></percentFromNumber>
+    <percentOfNumber class="percent-page__item"></percentOfNumber>
+    <percentFromPercent class="percent-page__item"></percentFromPercent>
+  </div>
 </div>

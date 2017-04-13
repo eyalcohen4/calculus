@@ -6,7 +6,7 @@
 
  <script>
  /* eslint-disable no-underscore-dangle */
-  import { percentFromNumber } from '@/lib/percentage';
+  import { hundredPercentFromPercant } from '@/lib/percentage';
   import calcCard from '@/HoC/calculation-card';
 
   export default {
@@ -18,7 +18,7 @@
 
     data() {
       return {
-        title: 'cards.percent_from_number',
+        title: 'cards.how_much_is_100',
         handler: this.handler,
         inputs: [
           {
@@ -45,7 +45,7 @@
         const num = this.inputs[0].value;
         const percent = this.inputs[1].value;
 
-        this.result = percentFromNumber(num, percent);
+        this.result = hundredPercentFromPercant(percent, num);
       },
     },
   };

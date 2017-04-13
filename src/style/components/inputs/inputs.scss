@@ -1,11 +1,32 @@
 %input-container {
-  display: flex;
+  position:relative;
+  margin-bottom:45px;
 
   &__label {
     position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 1em;
+    font-weight: normal;
+    pointer-events: none;
+
   }
 
   &__input {
-    flex: 1;
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    font-size: 1em;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ %input-container__label, &:valid ~ %input-container__label {
+      top: -20px;
+      font-size: 0.750em;
+      transition:0.2s ease all;
+    }
   }
 }
