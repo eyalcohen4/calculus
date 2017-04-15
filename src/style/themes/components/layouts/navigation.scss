@@ -1,0 +1,17 @@
+.navigation {
+
+  &__list {
+
+    &__item {
+      color: $accent-color;
+
+      &__link {
+        a {
+          &:visited {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}

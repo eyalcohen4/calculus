@@ -9,6 +9,14 @@ const en = {
     percent_of_number: 'What percent is number from sum ?',
     how_much_is_100: 'If Number is X percent, how much is 100% ?',
   },
+  bmi: {
+    height: 'Height',
+    weight: 'Weight',
+  },
+  navigation: {
+    percent: 'Percentage Calculator',
+    bmi: 'BMI Calculator',
+  },
 };
 
 export default en;

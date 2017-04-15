@@ -1,4 +1,4 @@
 export default function bmiCalculator(height, weight) {
-  return weight / (height ** 2);
+  return parseInt(weight / (height ** 2), 10);
 }
 

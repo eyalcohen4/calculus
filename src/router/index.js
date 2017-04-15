@@ -11,12 +11,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Percent',
+      name: 'navigation.percent',
       component: Percent,
     },
     {
       path: '/BMI',
-      name: 'BMI',
+      name: 'navigation.bmi',
       component: BMI,
     },
   ],

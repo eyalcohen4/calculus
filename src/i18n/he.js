@@ -8,6 +8,15 @@ const he = {
     percent_from_number: 'כמה שווים מספר אחוזים מתוך סכום ?',
     percent_of_number: 'כמה זה סכום מתוך סכום באחוזים ?',
     how_much_is_100: 'אם סכום הוא X אחוזים, כמה הם 100% ?',
+    calculate_bmi: 'מחשבון BMI',
+  },
+  bmi: {
+    height: 'גובה',
+    weight: 'משקל',
+  },
+  navigation: {
+    percent: 'מחשבון אחוזים',
+    bmi: 'מחשבון BMI',
   },
 };
 
