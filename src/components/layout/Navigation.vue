@@ -13,7 +13,6 @@
 <script>
   import router from '@/router';
 
-  console.log(router);
   export default {
     name: 'navigation',
     data() {

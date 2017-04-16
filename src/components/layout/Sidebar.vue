@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li v-for="navItem in routes" class="navigation__list__item">
-          <router-link :to="navItem.path" v-text="$t(navItem.name)" class="navigation__list__item__link"></router-link>
+  <div v-if="show" class="sidebar" :class="{ 'sidebar--active': show, 'sidebar--left': left }">
+    <nav class="sidebar__navigation">
+      <ul class="sidebar__navigation__list">
+        <li v-for="navItem in routes" class="sidebar__navigation__list__item">
+          <router-link :to="navItem.path" v-text="$t(navItem.name)" class="sidebar__navigation__list__item__link"></router-link>
         </li>
       </ul>
     </nav>
@@ -19,6 +19,10 @@
       return {
         routes: router.options.routes,
       };
+    },
+    props: {
+      show: { type: Boolean },
+      left: { type: Boolean },
     },
   };
 </script>
