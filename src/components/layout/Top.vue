@@ -6,7 +6,7 @@
     </div>
     <div class="header__menu">
       <Navigation class="desktop-only"></Navigation>
-      <Sidebar :show="showSidebar" :left="sidebarLeft"></Sidebar>
+      <Sidebar :show="showSidebar" :left="sidebarLeft" v-on:close="changeSidebar"></Sidebar>
     </div>
   </header>
 </template>

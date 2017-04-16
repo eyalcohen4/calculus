@@ -1,5 +1,6 @@
 <template>
   <div v-if="show" class="sidebar" :class="{ 'sidebar--active': show, 'sidebar--left': left }">
+    <span class="sidebar__close" @click="closeSidebar">X</span>
     <nav class="sidebar__navigation">
       <ul class="sidebar__navigation__list">
         <li v-for="navItem in routes" class="sidebar__navigation__list__item">
@@ -23,6 +24,11 @@
     props: {
       show: { type: Boolean },
       left: { type: Boolean },
+    },
+    methods: {
+      closeSidebar() {
+        this.$emit('close');
+      },
     },
   };
 </script>
