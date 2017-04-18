@@ -3,13 +3,16 @@
   "name": "Your easiest calculator",
   "icons": [
     {
-      "src": "./images/logo-144",
+      "src": "images/logo-144.png",
       "sizes": "144x144",
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "",
   "orientation": "portrait",
   "theme_color": "#FFEB3B",
-  "display": "standalone"
+  "display": "standalone",
+  "related_applications": [{
+    "platform": "web"
+  }]
 }
