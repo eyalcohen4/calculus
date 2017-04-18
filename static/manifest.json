@@ -1,0 +1,15 @@
+{
+  "short_name": "Calculus",
+  "name": "Your easiest calculator",
+  "icons": [
+    {
+      "src": "./images/logo-144",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "orientation": "portrait",
+  "theme_color": "#FFEB3B",
+  "display": "standalone"
+}

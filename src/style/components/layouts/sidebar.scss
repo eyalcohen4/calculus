@@ -8,6 +8,7 @@
   height: 100%;
   padding: 0 20px;
   transform: translateX(150px);
+  transition: transform 5s ease;
 
   &__close {
     position: absolute;
@@ -30,6 +31,7 @@
       }
     }
   }
+
   &--active {
     display: block;
     transform: translateX(0px);
@@ -40,4 +42,3 @@
   }
 
 }
-

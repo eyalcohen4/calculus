@@ -2,6 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -79,7 +80,7 @@ module.exports = {
               plugins: function () {
                 return [
                   require('precss'),
-                  require('autoprefixer')
+                  require('autoprefixer'),
                 ];
               }
             },
@@ -88,5 +89,5 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
 }

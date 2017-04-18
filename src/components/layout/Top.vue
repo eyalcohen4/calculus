@@ -2,7 +2,7 @@
   <header class="header">
     <button class="open-sidebar mobile-only" @click="changeSidebar">=</button>
     <div class="header__logo">
-      LOGO
+      <img src="static/images/logo.png" class="header__logo__img" alt="Calculus Logo"></img>
     </div>
     <div class="header__menu">
       <Navigation class="desktop-only"></Navigation>

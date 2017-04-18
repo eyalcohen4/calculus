@@ -1,12 +1,11 @@
 <template>
   <div class="calculation-card">
-    
     <div class="calculation-card__header">
       <span v-text="$t(title)" class="calculation-card__header__title"></span>
     </div>
 
+    <form>
     <div class="calculation-card__content">
-
       <div class="small-6 large-12 columns">
         <inputNumber
           key="input.id"
@@ -28,13 +27,13 @@
           </span>
         </div>
       </div>
-      
+
     </div>
 
     <div class="calculation-card__actions">
       <button @click="handler" class="calculation-card__actions__button" v-text="$t(button)"></button>
     </div>
-
+  </form>
   </div>
 </template>
 
