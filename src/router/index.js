@@ -4,7 +4,7 @@ import Router from 'vue-router';
 // import Examples from '@/pages/examples/examples.page';
 import BMI from '@/pages/bmi/bmi.page';
 import Percent from '@/pages/percent/percent.page';
-// import Time from '@/pages/time/time.page';
+import Time from '@/pages/time/time.page';
 
 Vue.use(Router);
 
@@ -24,7 +24,7 @@ export default new Router({
     {
       path: '/Time',
       name: 'navigation.time',
-      // component: Time,
+      component: Time,
     },
     // Uncomment this when examples needed
     // {

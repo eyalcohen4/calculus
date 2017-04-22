@@ -36,7 +36,6 @@
         ],
         button: 'calc',
         result: '?',
-
       };
     },
 

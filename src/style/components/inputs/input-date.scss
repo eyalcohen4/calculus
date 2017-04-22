@@ -1,0 +1,17 @@
+.input-date {
+  @extend %input-container;
+
+  &__label {
+    @extend %input-container__label;
+  }
+
+  &__picker {
+
+    .vdp-datepicker__calendar {
+      width: 100%;
+    }
+    &__input {
+      @extend %input-container__input;
+    }
+  }
+}
