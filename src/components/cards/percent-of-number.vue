@@ -1,6 +1,13 @@
 <template>
   <div class="perFromNumber">
-    <calcCard :result="result" :title="title" :inputs="inputs" :handler="handler" :button="button"></calcCard>
+    <calcCard
+    :result="result"
+    :title="title"
+    :inputs="inputs"
+    :handler="handler"
+    :button="button"
+    :percrent="percent">
+    </calcCard>
   </div>
 </template>
 

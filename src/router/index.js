@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Percent from '@/pages/percent/percent.page';
+// import Examples from '@/pages/examples/examples.page';
 import BMI from '@/pages/bmi/bmi.page';
+import Percent from '@/pages/percent/percent.page';
+// import Time from '@/pages/time/time.page';
 
 Vue.use(Router);
 
@@ -19,5 +21,16 @@ export default new Router({
       name: 'navigation.bmi',
       component: BMI,
     },
+    {
+      path: '/Time',
+      name: 'navigation.time',
+      // component: Time,
+    },
+    // Uncomment this when examples needed
+    // {
+    //   path: '/Examples',
+    //   name: 'examples',
+    //   component: Examples,
+    // },
   ],
 });

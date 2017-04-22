@@ -32,7 +32,7 @@ if (store.getters.locale === 'he') {
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/static/sw.js').then((registration) => {
+    navigator.serviceWorker.register('/static/sw.js', { scope: '/src/' }).then((registration) => {
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, (err) => {
       console.log('ServiceWorker registration failed: ', err);

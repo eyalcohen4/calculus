@@ -32,4 +32,7 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new FriendlyErrorsPlugin()
   ],
+  devServer: {
+    headers: { 'Service-Worker-Allowed': true },
+  }
 })

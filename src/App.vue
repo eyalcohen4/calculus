@@ -2,6 +2,7 @@
   <div id="app">
     <top></top>
     <main>
+      <div class="sidebar-overlay" id="sidebar-overlay"></div>
       <router-view></router-view>
     </main>
     <bottom></bottom>

@@ -30,5 +30,13 @@
         this.$emit('close');
       },
     },
+    updated() {
+      const overlay = document.getElementById('sidebar-overlay');
+      if (this.show) {
+        overlay.classList.add('active');
+      } else {
+        overlay.classList.remove('active');
+      }
+    },
   };
 </script>

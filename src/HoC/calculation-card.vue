@@ -4,41 +4,37 @@
       <span v-text="$t(title)" class="calculation-card__header__title"></span>
     </div>
 
-    <form>
     <div class="calculation-card__content">
-      <div class="small-6 large-12 columns">
+      <div class="small-12 large-12 columns">
+
         <inputNumber
           key="input.id"
           v-for="input in inputs"
           v-model="input.value"
-          :id="input.id"
+          :input="input"
           :label="input.label"
-          :required="input.required"
           class="calculation-card-content__item">
         </inputNumber>
-        <span v-text="$t(error)"></span>
-      </div>
-      <div class="small-6 large-12 columns">
-        <div class="calculation-card__content__result">
-          <span class="calculation-card__content__result__sign"> = </span>
-          <span class="calculation-card__content__result__number">
-            {{ result }}
-            <span v-if="percent"> % </span>
-          </span>
-        </div>
-      </div>
 
+        <card-result :result="result"></card-result>
+        <span v-text="$t(error)"></span>
+
+      </div>
     </div>
 
     <div class="calculation-card__actions">
-      <button @click="handler" class="calculation-card__actions__button" v-text="$t(button)"></button>
+      <button @click.prevent="handler" class="calculation-card__actions__button" v-text="$t(button)"></button>
     </div>
-  </form>
+
+    <div class="calculation-card__result">
+      <span v-if="percent"> % </span>
+    </div>
   </div>
 </template>
 
 <script>
   import inputNumber from '@/components/inputs/input-number';
+  import cardResult from '@/components/card-result';
 
   export default {
     name: 'percent-card',
@@ -49,11 +45,15 @@
       button: { type: String, rqeuired: true },
       inputs: { type: Array, required: true },
       percent: { type: Boolean },
-      result: { type: [Number, String] },
+      result: {
+        type: [Number, String],
+        default() { return 0; },
+      },
       error: { type: String },
     },
     components: {
       inputNumber,
+      cardResult,
     },
     methods: {
       actionClick() {
