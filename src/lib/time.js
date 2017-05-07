@@ -10,7 +10,9 @@ export function durationBetweenDays(from, to) {
 }
 
 export function durationBetweenHours(from, to) {
-  from = moment(from);
+  from = moment(from, 'HH:mm');
+  to = moment(to, 'HH:mm');
+
   const duration = moment.duration(from.diff(to));
 
   return duration.asHours();

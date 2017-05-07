@@ -1,6 +1,6 @@
 <template>
   <div class="input-date">
-    <input type="text" class="input-date__input" :required="input.required"
+    <input type="time" class="input-date__input" :required="input.required"
       @change="updateValue($event)">
     <label :for="input.id" v-text="$t(label)"></label>
   </div>
@@ -26,7 +26,7 @@
     },
     methods: {
       updateValue(e) {
-        this.$emit('input', e);
+        this.$emit('input', e.currentTarget.value);
       },
     },
   };
