@@ -9,6 +9,8 @@
     @extend %card__content;
 
     &__result {
+      display: flex;
+      justify-content: center;
 
       &__sign, &__number {
         display: block;
